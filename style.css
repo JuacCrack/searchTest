@@ -1,0 +1,129 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Helvetica' !important;
+}
+
+.form-group {
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
+input {
+    width: 12rem;
+    height: 2rem;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    padding-left: 0.5rem;
+    border-radius: 2px;
+}
+
+.search-box {
+    width: 12rem;
+    max-height: 8rem;
+    overflow: auto;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+    position: absolute;
+}
+
+.search-item {
+    width: 100%;
+    height: 2.5rem;
+    box-sizing: border-box;
+    display: flex;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+
+.search-item:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.search-img {
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid gray;
+}
+
+.search-details {
+    width: 75%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    height: 2rem;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-container {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px); /* Standard syntax */
+    -webkit-backdrop-filter: blur(10px); /* Safari 9+ and iOS 9+ */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.30s, opacity 0.30s ease-in-out;
+}
+
+.popup-container:target {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.30s ease-in-out;
+}
+
+.popup {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
+    width: 25%;
+    height: 25%;
+}
+
+.close {
+    width: min-content;
+    background-color: transparent;
+    margin: auto;
+    display: block;
+    border: none;
+}
+
+.close a {
+    text-decoration: none;
+    color: rgb(255, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.popup-img {
+    width: 5rem;
+    height: 5rem;
+    box-sizing: border-box;
+    margin: 1rem auto;
+}
